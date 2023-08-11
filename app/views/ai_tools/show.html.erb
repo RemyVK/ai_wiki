@@ -1,8 +1,14 @@
-
 <h2><%= @ai_tool.name %></h2>
 <p><strong>Description:</strong> <%= @ai_tool.description %></p>
 <p><strong>Link:</strong> <%= link_to @ai_tool.link, @ai_tool.link, target: "_blank" %></p>
 <p><strong>Category:</strong> <%= @ai_tool.category.category %></p>
-<p><strong>Price:</strong> <%= @ai_tool.price.price %><br>
-  <br>
+<p><strong>Price:</strong> <%= @ai_tool.price.price %></p><br>
+
+
+<%= link_to "Edit the tool", edit_ai_tool_path(@ai_tool.id) %>
+<br />
+<br />
 <%= link_to 'Back', ai_tools_path %>
+<br />
+<br />
+<%= link_to "Go back to Home page", root_path %>
