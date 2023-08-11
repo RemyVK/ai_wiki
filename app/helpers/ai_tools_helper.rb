@@ -1,0 +1,2 @@
+module AiToolsHelper
+end

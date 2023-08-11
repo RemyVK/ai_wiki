@@ -1,0 +1,19 @@
+<h1> Add a new AI Tool </h1>
+
+<p> Please enter following details to add a new AI tool</p>
+
+
+<%= form_with model: @ai_tool do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+  <%= form.label :link %>
+  <%= form.text_field :link %>
+  <%= form.label :category %>
+  <%= form.select :category_id, @categories %>
+  <%= form.label :price %>
+  <%= form.select :price_id, @prices %>
+  <%= form.submit "Create" %>
+
+<% end %>
