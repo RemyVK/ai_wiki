@@ -46,6 +46,12 @@ class AiToolsController < ApplicationController
     end
   end
 
+  def destroy
+    @ai_tool = AiTool.find(params[:id])
+    @ai_tool.destroy
+    redirect_to root_path, status: :see_other
+  end
+
   private
   def ai_tool_params
     params.require(:ai_tool).permit(:name, :description, :link, :category_id, :price_id)
