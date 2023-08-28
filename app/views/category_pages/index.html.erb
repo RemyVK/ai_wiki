@@ -1,0 +1,11 @@
+
+<h1> You want to see all the AI tools in a single category ? Then just click them!! </h1>
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.category, category_page_path(category.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Go back to Home page", root_path %>

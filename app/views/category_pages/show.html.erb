@@ -1,0 +1,16 @@
+
+<h1>AI Tools for Category: <%= @category.category %></h1>
+
+<ul>
+  <% @ai_tools.each do |ai_tool| %>
+    <li>
+      <%=link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<%= link_to "Go back to Home page", root_path %>
+<br>
+<br>
+<%= link_to "Go back to Categories", category_pages_path %>
