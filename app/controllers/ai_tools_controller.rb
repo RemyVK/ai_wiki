@@ -2,7 +2,7 @@ class AiToolsController < ApplicationController
 
   # View for all the AI tools
   def index
-    @ai_tools = AiTool.all
+    @ai_tools = AiTool.paginate(page: params[:page], per_page: 25)
   end
 
   # View for a specific AI tool

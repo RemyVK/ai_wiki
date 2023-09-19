@@ -9,6 +9,11 @@ gem "rails", "~> 7.0.6"
 #Install Nokogiri
 gem 'nokogiri'
 
+#Use will-paginate for pagination
+gem 'will_paginate', '~> 4.0'
+
+gem 'will_paginate-bootstrap4'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

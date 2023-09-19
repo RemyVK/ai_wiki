@@ -10,6 +10,10 @@
   <% end %>
 </ul>
 
+<ul class="pagination justify-content-center">
+  <%= will_paginate @ai_tools, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</ul>
+
 <%= link_to "Go back to Home page", root_path %>
 <br>
 <br>
