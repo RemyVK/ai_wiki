@@ -1,20 +1,38 @@
-<h1> Edit the AI Tool </h1>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-green" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 56px; padding-top: 20px"> Edit the AI Tool </h1>
 
-<p> Please enter following details to edit the AI tool</p>
+      <p class="text-black" style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 20px; padding-top: 20px;">
+        Update the relevant details to edit the AI tool</p>
 
-<%= form_with model: @ai_tool do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :description %>
-  <%= form.text_field :description %>
-  <%= form.label :link %>
-  <%= form.text_field :link %>
-  <%= form.label :category %>
-  <%= form.select :category_id, @categories %>
-  <%= form.label :price %>
-  <%= form.select :price_id, @prices %>
-  <%= form.submit "Update " %>
+      <%= form_with model: @ai_tool, html: { class: 'form' } do |form| %>
 
-<% end %>
-<br />
-<%= link_to 'Cancel', ai_tool_path(@ai_tool.id) %>
+        <div class="form-group mb-3">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: 'form-control', style: 'width : 250px;' %>
+        </div>
+        <div class="form-group mb-3">
+          <%= form.label :description %>
+          <%= form.text_field :description, class: 'form-control', style: 'width : 250px;' %>
+        </div>
+        <div class="form-group mb-3">
+          <%= form.label :link %>
+          <%= form.text_field :link, class: 'form-control', style: 'width : 250px;' %>
+        </div>
+        <div class="form-group mb-3">
+          <%= form.label :category %>
+          <%= form.select :category_id, @categories %>
+        </div>
+        <div class="form-group mb-3">
+          <%= form.label :price %>
+          <%= form.select :price_id, @prices %>
+        </div>
+
+        <%= form.submit "Update", class: 'btn btn-primary' %>
+        <%= link_to 'Cancel', ai_tool_path(@ai_tool.id), class: 'btn btn-secondary' %>
+        </form>
+      <% end %>
+    </div>
+  </div>
+</div>
