@@ -1,10 +1,9 @@
-
 <h1>AI Tools for Category: <%= @category.category %></h1>
 
 <ul>
   <% @ai_tools.each do |ai_tool| %>
     <li>
-      <%=link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
+      <%= link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
     </li>
     <br>
   <% end %>
@@ -14,7 +13,12 @@
   <%= will_paginate @ai_tools, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </ul>
 
-<%= link_to "Go back to Home page", root_path %>
 <br>
-<br>
-<%= link_to "Go back to Categories", category_pages_path %>
+
+<div class="col-lg-2 text-center">
+  <div class="d-flex justify-content-between">
+    <a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button"style="margin-left: 20px">Go back to Home page</a>
+    <a class="btn btn-primary text-nowrap" href="<%= category_pages_path %>" role="button" style="margin-left: 20px">Go back to Categories</a>
+  </div>
+</div>
+

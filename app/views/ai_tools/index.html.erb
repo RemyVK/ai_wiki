@@ -1,10 +1,9 @@
-
 <ul>
   <% @ai_tools.each do |ai_tool| %>
     <li>
-      <strong>Name:</strong> <%=link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
+      <strong>Name:</strong> <%= link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
       <strong>Description:</strong> <%= ai_tool.description %><br>
-      <strong>Link:</strong> <%= link_to ai_tool.link,ai_tool.link, target: "_blank" %><br>
+      <strong>Link:</strong> <%= link_to ai_tool.link, ai_tool.link, target: "_blank" %><br>
       <strong>Category:</strong> <%= ai_tool.category.category %><br>
       <strong>Price:</strong> <%= ai_tool.price.price %><br>
     </li>
@@ -15,4 +14,7 @@
   <%= will_paginate @ai_tools, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </ul>
 
-<%= link_to "Go back to Home page", root_path %>
+<br>
+<div class="col-lg-2 text-center">
+  <a class="btn btn-primary" href="<%= root_path %>" role="button">Go back to Home page</a>
+</div>
