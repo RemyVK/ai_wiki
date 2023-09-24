@@ -1,23 +1,25 @@
-
-<h2><%= @ai_tool.name %></h2>
-<p><strong>Description:</strong> <%= @ai_tool.description %></p>
-<p><strong>Link:</strong> <%= link_to @ai_tool.link, @ai_tool.link, target: "_blank" %></p>
-<p><strong>Category:</strong> <%= @ai_tool.category.category %></p>
-<p><strong>Price:</strong> <%= @ai_tool.price.price %></p><br>
-
-<br />
+<div style="margin: 30px 30px 10px 30px;">
+  <h2><%= @ai_tool.name %></h2>
+  <p><strong>Description:</strong> <%= @ai_tool.description %></p>
+  <p><strong>Link:</strong> <%= link_to @ai_tool.link, @ai_tool.link, target: "_blank" %></p>
+  <p><strong>Category:</strong> <%= @ai_tool.category.category %></p>
+  <p><strong>Price:</strong> <%= @ai_tool.price.price %></p><br>
+</div>
 
 <div class="col-lg-2 text-center">
   <div class="d-flex">
-    <a class="btn btn-primary text-nowrap" href="<%= edit_ai_tool_path(@ai_tool.id) %>" role="button" style="margin-left: 20px">Edit the tool</a>
+    <a class="btn btn-primary text-nowrap" href="<%= edit_ai_tool_path(@ai_tool.id) %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Edit
+      the tool</a>
     <a href="<%= ai_tool_path(@ai_tool.id) %>"
        data-turbo-method="delete"
        data-turbo-confirm="Are you sure?"
        class="btn btn-primary text-nowrap"
-       style="margin-left: 20px">
+       style="margin-left: 20px; margin-bottom: 20px">
       Destroy the tool
     </a>
-    <a class="btn btn-primary text-nowrap" href="<%= ai_tools_path %>" role="button" style="margin-left: 20px">Back to AI Tools</a>
-    <a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button" style="margin-left: 20px">Go back to Home page</a>
+    <a class="btn btn-primary text-nowrap" href="<%= ai_tools_path %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Back
+      to AI Tools</a>
+    <a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Go
+      back to Home page</a>
   </div>
 </div>

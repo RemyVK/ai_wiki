@@ -1,15 +1,14 @@
-<h1>AI Tools for Category: <%= @category.category %></h1>
-
-<ul>
+<h1 class="text-center" style="margin: 40px 0px 0px 20px ">AI Tools for Category: <%= @category.category %></h1>
+<div class="d-flex flex-wrap justify-content-center" style="list-style-type: none; padding-left: 0;">
   <% @ai_tools.each do |ai_tool| %>
-    <li>
-      <%= link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
-    </li>
-    <br>
+    <div class="m-2">
+      <%= link_to ai_tool.name, ai_tool_path(ai_tool.id), class: "btn btn-light", style: "width: 250px; padding: 10px 20px; margin: 30px 20px 0px 0px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;", onmouseover: "this.style.transform='translateY(-5px)';", onmouseout: "this.style.transform='none';" %>
+    </div>
   <% end %>
-</ul>
+</div>
 
-<ul class="pagination justify-content-center">
+
+<ul class="pagination justify-content-center" style="margin-top: 100px">
   <%= will_paginate @ai_tools, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </ul>
 
@@ -17,8 +16,10 @@
 
 <div class="col-lg-2 text-center">
   <div class="d-flex justify-content-between">
-    <a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button"style="margin-left: 20px">Go back to Home page</a>
-    <a class="btn btn-primary text-nowrap" href="<%= category_pages_path %>" role="button" style="margin-left: 20px">Go back to Categories</a>
+    <a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Go
+      back to Home page</a>
+    <a class="btn btn-primary text-nowrap" href="<%= category_pages_path %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Go
+      back to Categories</a>
   </div>
 </div>
 

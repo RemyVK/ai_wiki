@@ -1,20 +1,30 @@
-<ul>
+<ul style="font-family: 'Roboto', sans-serif;">
   <% @ai_tools.each do |ai_tool| %>
-    <li>
-      <strong>Name:</strong> <%= link_to ai_tool.name, ai_tool_path(ai_tool.id) %><br>
-      <strong>Description:</strong> <%= ai_tool.description %><br>
-      <strong>Link:</strong> <%= link_to ai_tool.link, ai_tool.link, target: "_blank" %><br>
-      <strong>Category:</strong> <%= ai_tool.category.category %><br>
-      <strong>Price:</strong> <%= ai_tool.price.price %><br>
-    </li>
-    <br>
+    <ul style="margin: 20px 20px 20px 0;; padding: 10px; border-radius: 5px; background-color: #f4f4f4;">
+
+      <strong style="color: #007BFF;">Name:</strong>
+      <%= link_to ai_tool.name, ai_tool_path(ai_tool.id), style: "color: #333; text-decoration: none; font-weight: bold;" %><br>
+
+      <strong style="color: #007BFF;">Description:</strong>
+      <span style="color: #555;"><%= ai_tool.description %></span><br>
+
+      <strong style="color: #007BFF;">Link:</strong>
+      <%= link_to ai_tool.link, ai_tool.link, target: "_blank", style: "color: #555;" %><br>
+
+      <strong style="color: #007BFF;">Category:</strong>
+      <span style="color: #555;"><%= ai_tool.category.category %></span><br>
+
+      <strong style="color: #007BFF;">Price:</strong>
+      <span style="color: #555;"><%= ai_tool.price.price %></span><br>
+    </ul>
   <% end %>
 </ul>
+
 <ul class="pagination justify-content-center">
   <%= will_paginate @ai_tools, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </ul>
 
 <br>
 <div class="col-lg-2 text-center">
-  <a class="btn btn-primary" href="<%= root_path %>" role="button">Go back to Home page</a>
+  <a class="btn btn-primary" href="<%= root_path %>" role="button" style="margin-bottom: 20px">Go back to Home page</a>
 </div>

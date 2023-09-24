@@ -32,8 +32,8 @@
           <%= form.select :price_id, @prices, { include_blank: 'Select Price', selected: '' }, class: 'form-select', style: 'width: 400px;' %>
         </div>
 
-        <%= form.submit "Create", class: 'btn btn-primary' %>
-        <%= link_to 'Cancel', root_path, class: 'btn btn-secondary' %>
+        <%= form.submit "Create", class: 'btn btn-primary',style: "margin-bottom: 20px"%>
+        <%= link_to 'Cancel', root_path, class: 'btn btn-secondary',style: "margin-bottom: 20px" %>
         </form>
       <% end %>
     </div>
