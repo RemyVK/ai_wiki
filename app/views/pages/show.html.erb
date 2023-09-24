@@ -1,26 +1,27 @@
-<div class="container-fluid mt-5 position-relative" style="background-image: url('<%= asset_path('image.jpeg') %>'); background-size: cover;
+<div class="container-fluid mt-5 position-relative" style="background-image: url('<%= asset_path('AI-tools.jpeg') %>'); background-size: cover;
   background-repeat: no-repeat; background-position: center; height: 110vh; margin: 0; padding: 0;">
   <div class="col-lg-6 mx-auto text-center" style="padding-top: 50px;">
     <h1 class="text-green" style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 56px;">AI TOOLS</h1>
-    <p class="text-black" style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 20px; padding-top: 20px;">
+    <p class="text-black" style="font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 25px; padding-top: 20px;">
       Discover a wide range of AI tools to enhance your projects.</p>
   </div>
 
-  <div class="container mt-4 position-absolute top-50 start-50 translate-middle">
+  <div style="padding-top: 10%;" class="container mt-4 position-absolute top-50 start-50 translate-middle">
     <div class="row justify-content-center"> <!-- Center-align the row -->
-      <div class="col-lg-4">
-        <a href="<%= ai_tools_path %>" class="btn btn-light" style="width: 50%;">All AI Tools</a>
+      <div class="col-lg-4 text-center">
+        <a href="<%= ai_tools_path %>" class="btn btn-light" style="width: 50%; margin-top: 200px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">All AI Tools</a>
       </div>
       <div class="col-lg-4 text-center">
-        <a href="<%= new_ai_tool_path %>" class="btn btn-light" style="width: 50%;">Create an AI Tool</a>
+        <a href="<%= new_ai_tool_path %>" class="btn btn-light" style="width: 50%; margin-top: 200px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">Create an AI Tool</a>
       </div>
       <div class="col-lg-4 text-center">
-        <a href="<%= category_pages_path %>" class="btn btn-light" style="width: 50%;">AI Tools per Category</a>
+        <a href="<%= category_pages_path %>" class="btn btn-light" style="width: 50%; margin-top: 200px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">AI Tools per Category</a>
       </div>
     </div>
   </div>
 
-  <div class="col-lg-6 mx-auto text-center" style="padding-top: 85px;">
+
+  <div class="col-lg-8 mx-auto text-center" style="padding-top: 85px;">
     <p class="text-black" style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 20px;padding-top: 400px;">
       Numerous new AI tools and programmes have been developed to assist businesses and organisations with automating operations,
       analysing data, forecasting trends, and many other tasks. We have outlined the most significant AI technologies in this list,
