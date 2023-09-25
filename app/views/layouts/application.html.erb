@@ -22,7 +22,7 @@
 <nav class="navbar bg-body-tertiary" style="padding: 20px 0;">
   <div class="container-fluid">
     <%= form_tag(searchbars_path, method: :get, class: "d-flex", role: "search") do %>
-      <input id="search-input" class="form-control me-2" type="search" placeholder="Search an AI Tool" aria-label="Search" style="margin-left: 28cm" name="search" value="<%= params[:search] %>">
+      <input id="search-input" class="form-control me-2" type="search" placeholder="Search an AI Tool" aria-label="Search" style="margin-left: 40cm" name="search" value="<%= params[:search] %>">
       <%= submit_tag("Search", class: "btn btn-outline-success") %>
     <% end %>
   </div>
