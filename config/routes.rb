@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root "pages#show"
   resources :ai_tools
   resources :category_pages, only:  [:show, :index]
+  resources :searchbars, only: :index
+
 end

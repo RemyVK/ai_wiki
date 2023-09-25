@@ -1,0 +1,25 @@
+
+<ul style="font-family: 'Roboto', sans-serif;">
+  <% @search_results.each do |search_results| %>
+    <ul style="margin: 20px 20px 20px 0;; padding: 10px; border-radius: 5px; background-color: #f4f4f4;">
+
+      <strong style="color: #007BFF;">Name:</strong>
+      <%= link_to search_results.name, ai_tool_path(search_results.id), style: "color: #333; text-decoration: none; font-weight: bold;" %><br>
+
+      <strong style="color: #007BFF;">Description:</strong>
+      <span style="color: #555;"><%= search_results.description %></span><br>
+
+      <strong style="color: #007BFF;">Link:</strong>
+      <%= link_to search_results.link, search_results.link, target: "_blank", style: "color: #555;" %><br>
+
+      <strong style="color: #007BFF;">Category:</strong>
+      <span style="color: #555;"><%= search_results.category.category %></span><br>
+
+      <strong style="color: #007BFF;">Price:</strong>
+      <span style="color: #555;"><%= search_results.price.price %></span><br>
+    </ul>
+  <% end %>
+</ul>
+
+<a class="btn btn-primary text-nowrap" href="<%= root_path %>" role="button" style="margin-left: 20px; margin-bottom: 20px">Go
+  back to Home page</a>
