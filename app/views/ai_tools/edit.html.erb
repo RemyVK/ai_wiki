@@ -29,8 +29,11 @@
           <%= form.select :price_id, @prices %>
         </div>
 
-        <%= form.submit "Update", class: 'btn btn-primary' %>
-        <%= link_to 'Cancel', ai_tool_path(@ai_tool.id), class: 'btn btn-secondary' %>
+        <div class="vstack gap-2 col-md-5 mx-auto">
+          <%= form.submit "Save Changes", class: 'btn btn-primary' %>
+          <%= link_to 'Cancel', ai_tool_path(@ai_tool.id), class: 'btn btn-secondary', style: "margin-bottom: 20px" %>
+        </div>
+
         </form>
       <% end %>
     </div>
